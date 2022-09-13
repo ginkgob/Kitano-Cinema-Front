@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Origen",
+        "director": "Cristopher Nolan",
+        "price": " (10€) "
+        },
+        {
+        "id": 2,
+        "name": "Blade Runner",
+        "director": "Ridley Scott",
+        "price": " (7€) "
+        },
+        {
+        "id": 3,
+        "name": "The Big Lebowski",
+        "director": "Joel & Ethan Coen",
+        "price": " (8€) "
+        }
+]
