@@ -1,9 +1,14 @@
 import React from 'react'
+// import MovieSelect from './MovieSelect'
 
-export const Counter = () => {
+export const Counter = ( { text, clickButton, clickEvent, times } ) => {
+
   return (
-    <div className='flex justify-center m-3'>
-        Counter
-    </div>
+    <>
+    <button className={clickButton ? 'click-button' : 'restart-button'} onClick={clickEvent}>
+      {text}
+    </button>
+    </>
+    
   )
 }
