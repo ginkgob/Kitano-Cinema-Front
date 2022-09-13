@@ -1,8 +1,6 @@
 import './App.css';
 import { Cinema } from './components/Cinema';
 import { MovieSelect } from './components/MovieSelect';
-import { Counter } from './components/Counter';
-// import { useState } from 'react';  
 
 function App() {
   
@@ -19,26 +17,8 @@ function App() {
         <MovieSelect/>
       </section>
       <section>
-        <Cinema
-          // clickEvent={addSeat}
-        />
+        <Cinema/>
       </section>
-      <section>
-        <Counter 
-          // text='Add'
-          // clickButton={true}
-          // clickEvent={addSeat}
-          // times = {clicks}
-          />
-        <Counter
-          // text='Restart'
-          // clickButton={false}
-          // clickEvent={restartSeats}
-        />
-      </section>
-      
-      
-      
     </div>
   );
 }

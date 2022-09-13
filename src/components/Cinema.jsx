@@ -1,20 +1,14 @@
 import React, {useState} from 'react'
 
+
 export const Cinema = () => {
     
 //Guardar en localstorage los asientos seleccionados
+//Bloquear algunos asientos
 
     const[isSelected, setIsSelected] = useState(false)
     const[clicks, setClicks] = useState(0)
-
-    const addSeat = () => {
-        setClicks( clicks + 1 );
-    }
-
-    const subtractSeat = () => {
-        setClicks( clicks - 1 );
-    }
-
+    
     const selectedSeat = (id) => {
         isSelected[`${id}`] ? subtractSeat() : addSeat(); 
         setIsSelected(prevState => ({
@@ -22,6 +16,14 @@ export const Cinema = () => {
             [id]: !prevState[id]
             })
         )
+    }
+
+    const addSeat = () => {
+        setClicks( clicks + 1 );
+    }
+
+    const subtractSeat = () => {
+        setClicks( clicks - 1 );
     }
 
     const n = 60; //butacas totales
@@ -42,18 +44,7 @@ export const Cinema = () => {
                     </div>)} 
                 </div>
 
-                <p>Seats assigned: {clicks} seats</p>
-
-                {/* <div className='flex m-2'>
-                    <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer'></div>
-                    <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer'></div>
-                    <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer'></div>
-                    <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer'></div>
-                    <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer'></div>
-                    <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer'></div>
-                    <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer'></div>
-                    <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer'></div>
-                    </div>*/}
+                <p className='text-center'>Seats assigned: {clicks} seats</p>
             </div>
         </div>
     )

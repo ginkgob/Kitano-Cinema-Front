@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import MoviesJson from '../movies.json'
 
 
-
 export const MovieSelect = () => {
 
     const [dropdown, setDropdown] = useState(false)
@@ -12,19 +11,6 @@ export const MovieSelect = () => {
     const openCloseDropdown = () => {
     setDropdown(!dropdown)
     }
-
-    // const [text, setText] = useState(
-    //     window.localStorage.getItem('text')
-    //     )
-
-    // const setLocalStorage = value =>  {
-    //     try {
-    //         setText(value)
-    //         window.localStorage.setItem("text", value)
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    // }
 
 /*Guardar la pelicula escogida en el localstorage*/
 
