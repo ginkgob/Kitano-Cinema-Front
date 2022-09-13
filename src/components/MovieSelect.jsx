@@ -13,6 +13,21 @@ export const MovieSelect = () => {
     setDropdown(!dropdown)
     }
 
+    // const [text, setText] = useState(
+    //     window.localStorage.getItem('text')
+    //     )
+
+    // const setLocalStorage = value =>  {
+    //     try {
+    //         setText(value)
+    //         window.localStorage.setItem("text", value)
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
+
+/*Guardar la pelicula escogida en el localstorage*/
+
     return (
         <section className='flex justify-center m-3'>
             <Dropdown isOpen = {dropdown} toggle = {openCloseDropdown} className = 'border-transparent' direction='right'>
