@@ -7,9 +7,21 @@ import MoviesJson from '../movies.json'
 export const MovieSelect = () => {
 
     const [dropdown, setDropdown] = useState(false)
+    const [selectMovie, setSelectMovie] = useState(
+        window.localStorage.getItem('movie')
+        )   
 
     const openCloseDropdown = () => {
     setDropdown(!dropdown)
+    }
+
+    const setLocalStorage = value => {
+        try {
+            setSelectMovie(value)
+            window.localStorage.setItem('movie', JSON.stringify(value)) 
+        } catch (error) {
+            console.error(error)
+        }
     }
 
 /*Guardar la pelicula escogida en el localstorage*/
@@ -22,11 +34,13 @@ export const MovieSelect = () => {
                 </DropdownToggle >
                 <DropdownMenu>
                     {
-                        MoviesJson.map( record => {
+                        MoviesJson.map( movie => {
                             return (
-                                    <DropdownItem className='box' key={ record.id }>
-                                        { record.name }
-                                        { record.price }
+                                    <DropdownItem className='box' key={ movie.id } 
+                                    value = {[movie.name, movie.price]} 
+                                    onClick = {e => setLocalStorage(e.target.value)}>
+                                        { movie.name }
+                                        { movie.price }
                                     </DropdownItem>
                             )}
                         )

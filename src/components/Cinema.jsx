@@ -8,7 +8,8 @@ export const Cinema = () => {
 
     const[isSelected, setIsSelected] = useState(false)
     const[clicks, setClicks] = useState(0)
-    
+    const[price, setPrice] = useState(0)
+
     const selectedSeat = (id) => {
         isSelected[`${id}`] ? subtractSeat() : addSeat(); 
         setIsSelected(prevState => ({
@@ -19,11 +20,17 @@ export const Cinema = () => {
     }
 
     const addSeat = () => {
+        const price = 10;
         setClicks( clicks + 1 );
+        setPrice( ( clicks + 1 ) * price );
+        // return price
     }
 
     const subtractSeat = () => {
+        const price = 10;
+        console.log(price);
         setClicks( clicks - 1 );
+        setPrice( ( clicks * price ) - price );
     }
 
     const n = 60; //butacas totales
@@ -44,7 +51,7 @@ export const Cinema = () => {
                     </div>)} 
                 </div>
 
-                <p className='text-center'>Seats assigned: {clicks} seats</p>
+                <p className='text-center'>You have selected {clicks} seats for a price of {price}€</p>
             </div>
         </div>
     )
