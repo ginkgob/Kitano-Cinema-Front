@@ -13,15 +13,19 @@ export const MovieSelect = () => {
         setDropdown(!dropdown)
     }
 
-    const [price, setPrice] = useState()
-
+    const [price, setPrice] = useState(MoviesJson[0].price)
     const sessionPrice = value => {
         setPrice(value)
     }
 
+    const [name, setName] = useState(MoviesJson[0].name)
+    const sessionName = name => {
+        setName(name)
+    }
+
     return (
         <section className='flex justify-center flex-col m-3'>
-            <Dropdown isOpen = {dropdown} toggle = {openCloseDropdown} className = 'flex justify-center border-transparent' direction='right'>
+            <Dropdown isOpen = {dropdown} toggle = {openCloseDropdown} className = 'border-transparent' direction='right'>
                 <DropdownToggle caret>
                     Pick a Movie
                 </DropdownToggle >
@@ -31,8 +35,9 @@ export const MovieSelect = () => {
                             return (
                                     <DropdownItem className='box' key={ movie.id } 
                                     //[movie.name, movie.price]
-                                    value = {movie.price} 
-                                    onClick = {e => sessionPrice(e.target.value) }
+                                    value = {movie.price}
+                                    name = {movie.name} 
+                                    onClick = {e => { sessionPrice(e.target.value) ; sessionName(e.target.name) } }
                                     >
                                         { movie.name }
                                         ({ movie.price }€)
@@ -43,7 +48,7 @@ export const MovieSelect = () => {
             </DropdownMenu>
             </Dropdown>
             
-            <Cinema sessionPrice={price}/>
+            <Cinema sessionPrice={price} sessionName={name}/>
         
         </section>
 
