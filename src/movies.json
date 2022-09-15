@@ -2,19 +2,22 @@
     {
         "id": 1,
         "name": " Origen ",
-        "director": "Cristopher Nolan",
-        "price": 10
+        "price": 10,
+        "totalSeats": 60,
+        "blockedSeats": 3
         },
         {
         "id": 2,
         "name": " Blade Runner ",
-        "director": "Ridley Scott",
-        "price": 7
+        "price": 7,
+        "totalSeats": 60,
+        "blockedSeats": 6
         },
         {
         "id": 3,
         "name": " The Big Lebowski ",
-        "director": "Joel & Ethan Coen",
-        "price": 8
+        "price": 8,
+        "totalSeats": 60,
+        "blockedSeats": 8
         }
 ]
