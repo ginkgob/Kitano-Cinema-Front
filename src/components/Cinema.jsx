@@ -13,6 +13,11 @@ const selectedSeat = (id) => {
   setIsSelected(prevState => ({...isSelected, [id]: !prevState[id]}))
   // window.localStorage.setItem('clicks', clicks)
 }
+// const selectedSeat = () => {
+//     setIsSelected(prevState => ({...isSelected, [id]: !prevState[id]}))
+//   isSelected ? subtractSeat() : addSeat(); 
+//   // window.localStorage.setItem('clicks', clicks)
+// }
 
 const[clicks, setClicks] = useState(0)
 const [price, setPrice] = useState(0)
@@ -37,9 +42,18 @@ const subtractSeat = () => {
             <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer'
                 key={i}
                 style={{backgroundColor: isSelected[`${i}`] ? 'red' :  ''}} 
-                onClick = { () => selectedSeat(i) }
-                >
-            </div>)} 
+                onClick = { () => selectedSeat(i) }>
+            </div>)}
+            {/* <div>
+              <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer' onClick = { selectedSeat() } style={{backgroundColor: isSelected ? 'red' :  ''}}></div>
+              <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer' onClick = { selectedSeat() } style={{backgroundColor: isSelected ? 'red' :  ''}}></div>
+              <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer' onClick = { selectedSeat() } style={{backgroundColor: isSelected ? 'red' :  ''}}></div>
+              <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer' onClick = { selectedSeat() } style={{backgroundColor: isSelected ? 'red' :  ''}}></div>
+              <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer' onClick = { selectedSeat() } style={{backgroundColor: isSelected ? 'red' :  ''}}></div>
+              <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer' onClick = { selectedSeat() } style={{backgroundColor: isSelected ? 'red' :  ''}}></div>
+              <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer' onClick = { selectedSeat() } style={{backgroundColor: isSelected ? 'red' :  ''}}></div>
+              <div className='bg-[#444451] h-3 w-4 m-1 rounded-t-xl transform transition duration-500 hover:scale-125 cursor-pointer' onClick = { selectedSeat() } style={{backgroundColor: isSelected ? 'red' :  ''}}></div>
+            </div> */}
           </div>
         </div>
         <p>You have selected {clicks} seats for a price of {price}€</p>

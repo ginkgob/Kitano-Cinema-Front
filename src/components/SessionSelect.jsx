@@ -25,27 +25,27 @@ export const MovieSelect = () => {
 
     return (
         <section className='flex justify-center flex-col m-3'>
-            <Dropdown isOpen = {dropdown} toggle = {openCloseDropdown} className = 'border-transparent' direction='right'>
+            <Dropdown isOpen = {dropdown} toggle = {openCloseDropdown} className = 'border-transparent'>
                 <DropdownToggle caret>
-                    Pick a Movie
-                </DropdownToggle >
-                <DropdownMenu>
-                    {
-                        MoviesJson.map( movie => {
-                            return (
-                                    <DropdownItem className='box' key={ movie.id } 
-                                    //[movie.name, movie.price]
-                                    value = {movie.price}
-                                    name = {movie.name} 
-                                    onClick = {e => { sessionPrice(e.target.value) ; sessionName(e.target.name) } }
-                                    >
-                                        { movie.name }
-                                        ({ movie.price }€)
-                                    </DropdownItem>
-                            )}
-                        )
-                    }
-            </DropdownMenu>
+                    {name}({price})€
+                    <DropdownMenu>
+                        {
+                            MoviesJson.map( movie => {
+                                return (
+                                        <DropdownItem className='box' key={ movie.id } 
+                                        //[movie.name, movie.price]
+                                        value = {movie.price}
+                                        name = {movie.name} 
+                                        onClick = {e => { sessionPrice(e.target.value) ; sessionName(e.target.name) } }
+                                        >
+                                            { movie.name }
+                                            ({ movie.price }€)
+                                        </DropdownItem>
+                                )}
+                            )
+                        }
+                </DropdownMenu>
+            </DropdownToggle >
             </Dropdown>
             
             <Cinema sessionPrice={price} sessionName={name}/>
