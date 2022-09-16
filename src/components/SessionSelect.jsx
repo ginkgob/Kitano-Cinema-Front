@@ -24,11 +24,10 @@ export const MovieSelect = () => {
     }
 
     return (
-        <section className='flex justify-center flex-col m-3'>
-            <Dropdown isOpen = {dropdown} toggle = {openCloseDropdown} className = 'border-transparent'>
-                <DropdownToggle caret>
-                    {name}({price})€
-                    <DropdownMenu>
+        <section>
+            <Dropdown type = 'button' isOpen = {dropdown} toggle = {openCloseDropdown} className = 'flex justify-center items-center border-transparent mb-9' direction='right'>
+                <h5 className='mr-6 text-white'>Pick a Movie:</h5>
+                <DropdownToggle caret className='bg-white text-black w-56'>{ name }( { price }€ )<DropdownMenu>
                         {
                             MoviesJson.map( movie => {
                                 return (
@@ -37,7 +36,7 @@ export const MovieSelect = () => {
                                         value = {movie.price}
                                         name = {movie.name} 
                                         onClick = {e => { sessionPrice(e.target.value) ; sessionName(e.target.name) } }
-                                        >
+                                        size = 'sm'>
                                             { movie.name }
                                             ({ movie.price }€)
                                         </DropdownItem>

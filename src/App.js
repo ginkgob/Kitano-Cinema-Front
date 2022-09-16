@@ -3,10 +3,8 @@ import { MovieSelect } from './components/SessionSelect';
 
 function App() {
   return (
-    <div className='flex flex-col m-3'>
-      <section>
+    <div>
         <MovieSelect />
-      </section>
     </div>
   );
 }
