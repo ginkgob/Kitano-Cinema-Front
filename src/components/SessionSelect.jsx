@@ -31,14 +31,9 @@ export const MovieSelect = () => {
             {
               MoviesJson.map( movie => {
                 return (
-                  <DropdownItem className='box' key={ movie.id } 
-                    //[movie.name, movie.price]
-                    value = {movie.price}
-                    name = {movie.name} 
-                    onClick = {e => { sessionPrice(e.target.value) ; sessionName(e.target.name) } }
-                    size = 'sm'>
-                        { movie.name }
-                        ({ movie.price }€)
+                  <DropdownItem className='box' key={ movie.id } value = {movie.price} name = {movie.name} onClick = {e => { sessionPrice(e.target.value) ; sessionName(e.target.name) } }>
+                    { movie.name }
+                    ({ movie.price }€)
                   </DropdownItem>
                   )}
                 )

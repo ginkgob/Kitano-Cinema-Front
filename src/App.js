@@ -3,9 +3,9 @@ import { MovieSelect } from './components/SessionSelect';
 
 function App() {
   return (
-    <div>
-        <MovieSelect />
-    </div>
+    <>
+      <MovieSelect />
+    </>
   );
 }
 

@@ -1,23 +1,23 @@
 [
+  {
+    "id": 1,
+    "name": " Origen ",
+    "price": 10,
+    "totalSeats": 60,
+    "blockedSeats": 3
+    },
     {
-        "id": 1,
-        "name": " Origen ",
-        "price": 10,
-        "totalSeats": 60,
-        "blockedSeats": 3
-        },
-        {
-        "id": 2,
-        "name": " Blade Runner ",
-        "price": 7,
-        "totalSeats": 60,
-        "blockedSeats": 6
-        },
-        {
-        "id": 3,
-        "name": " The Big Lebowski ",
-        "price": 8,
-        "totalSeats": 60,
-        "blockedSeats": 8
-        }
+    "id": 2,
+    "name": " Blade Runner ",
+    "price": 7,
+    "totalSeats": 60,
+    "blockedSeats": 6
+    },
+    {
+    "id": 3,
+    "name": " The Big Lebowski ",
+    "price": 8,
+    "totalSeats": 60,
+    "blockedSeats": 8
+  }
 ]
