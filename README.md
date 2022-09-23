@@ -11,8 +11,6 @@ This web application will be based on a fictional cinema. Once build, you will b
 Local API will be consumed to fetch the different movie information.
 
 #### Stack
-
-------------
 - HTML
 - TailwindCSS
 - React.js
