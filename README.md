@@ -1,6 +1,6 @@
 ----------
 
-                                                                ----UNDER DEVELOPMENT----
+                                                      **UNDER DEVELOPMENT**
                                   
 
 # Kitano Cinema
