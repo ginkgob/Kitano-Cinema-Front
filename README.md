@@ -1,9 +1,8 @@
-----------
-
-                                                      UNDER DEVELOPMENT
-                                  
-
+----------                              
 # Kitano Cinema
+
+                                                                     ---UNDER DEVELOPMENT---
+                                                                     
 
 Kitano Cinema is a personal web project. 
 
