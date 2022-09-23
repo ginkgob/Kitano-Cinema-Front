@@ -1,9 +1,9 @@
-----------                              
+
 # Kitano Cinema
 
-                                                                     ---UNDER DEVELOPMENT---
-                                                                     
+**----------UNDER DEVELOPMENT----------**
 
+------------
 Kitano Cinema is a personal web project. 
 
 This web application will be based on a fictional cinema. Once build, you will be able to choose between several movies and book your seats for the next session. 
