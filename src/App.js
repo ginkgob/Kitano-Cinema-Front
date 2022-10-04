@@ -1,10 +1,10 @@
 import './App.css';
-import { MovieSelect } from './components/SessionSelect';
+import RoutesConfig from './routes/RoutesConfig'
 
 function App() {
   return (
     <>
-      <MovieSelect />
+      <RoutesConfig />
     </>
   );
 }
