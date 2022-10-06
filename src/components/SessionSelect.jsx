@@ -5,7 +5,7 @@ import MoviesJson from '../movies.json'
 import { Cinema } from './Cinema'
 
 
-export const MovieSelect = () => {
+const MovieSelect = () => {
 
   const [dropdown, setDropdown] = useState(false)  
   const openCloseDropdown = () => {
@@ -47,3 +47,5 @@ export const MovieSelect = () => {
     </section>
     )
 }
+
+export default MovieSelect;
