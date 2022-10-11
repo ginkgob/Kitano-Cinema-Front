@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {Dropdown, DropdownItem, DropdownMenu, DropdownToggle} from 'reactstrap'
 import MoviesJson from '../movies.json'
 import { Cinema } from './Cinema'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'   CHANGE TO TAILWINDCSS DROPDOWN
 
 
 const MovieSelect = () => {
