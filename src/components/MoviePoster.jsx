@@ -1,21 +1,29 @@
 import React from 'react'
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import MoviesJson from '../movies.json'
+
 
 const MoviePoster = () => {
 
   const navigate = useNavigate();
 
+  const [isHover, setIsHover] = useState(true)
+
+  const hideText = (id) => {
+    setIsHover(prevState => ({...isHover, [id]: !prevState[id]}))
+  }
+
   return (
     <section className='w-[80vw] h-fit bg-white rounded-2'>
       <div className='grid grid-cols-5 content-center justify-items-center m-4'>
         {
-        MoviesJson.map( movie => 
+          MoviesJson.map( (movie, i) => 
         <div className='m-2 w-40 h-auto hover:scale-[1.7] transition duration-500' key={movie.id}> 
           <div className='relative z-0 cursor-pointer group'>
-            <img className='rounded-lg' src={movie.img} alt="" /> 
+            <img className='rounded-lg' src={movie.img} alt={movie.name} /> 
 
-                <div className='absolute text-[9px] text-ellipsis overflow-hidden text-white inset-0 z-10 w-full h-full hover:bg-zinc-900/90 transition duration-200 rounded-lg hidden group-hover:block '>
+                <div className='absolute text-[9px] text-ellipsis overflow-hidden text-white inset-0 z-10 w-full h-full hover:bg-zinc-900/90 transition duration-200 rounded-lg hidden group-hover:block' onMouseEnter={ () =>  hideText(i) }  onMouseLeave={ () => hideText(i) }>
 
                   <div className='flex flex-col items-center p-2 font-semibold text-center'>
                     <p className='text-[2vh] p-1'>{movie.name}</p>
@@ -38,15 +46,16 @@ const MoviePoster = () => {
                   </div>
 
                 </div>
-
           </div>
-          <p className='text-center text-gray-600'>{movie.name}</p>
+
+          <div key={i} style={{visibility:isHover[`${i}`] ? 'hidden' : 'visible'}}>
+            <p className='text-center text-gray-600' >{movie.name}</p>
+          </div> 
         </div>
         )
-        }
+      }
       </div>
     </section>
   )
 }
-
 export default MoviePoster
